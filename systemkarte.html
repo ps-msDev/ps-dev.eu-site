@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080b0b">
+  <meta name="description" content="ps-dev.eu · P.Schmidt">
+  <title>ps-dev.eu</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="systemkarte.css">
+  <script src="systemkarte.js" defer></script>
+</head>
+<body>
+  <div class="atmosphere" aria-hidden="true"></div>
+  <canvas id="map" aria-hidden="true"></canvas>
+  <div class="veil" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="edge edge-top" aria-hidden="true"><i></i><i></i></div>
+  <div class="brand-symbol" aria-hidden="true">
+    <svg viewBox="0 0 40 40"><path d="M0 0h28l12 12v11H13v17H0Zm13 10v4h14v-4Z" fill="currentColor"/><path d="m22 27 18 13H22Z" fill="#ff532a"/></svg>
+  </div>
+  <ul class="legend" aria-label="Linien der Systemkarte hervorheben" hidden></ul>
+  <main>
+    <div class="registration" aria-hidden="true"><span></span><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    <h1>
+      <span class="sr-only">ps-dev.eu</span>
+      <svg class="wordmark" viewBox="0 0 818 104" fill="currentColor" aria-hidden="true">
+        <path d="M0 104V0h62l22 22v39L64 80H22v24Zm22-83v38h36l5-5V27l-6-6Z" fill-rule="evenodd"/>
+        <path d="M104 0h80v21h-59v19h40l21 21v24l-19 19h-65V83h61V64h-39l-22-22V20Z"/>
+        <path d="M207 42h46v20h-46Z"/>
+        <path d="M274 0h55l28 28v48l-28 28h-55Zm22 21v62h25l14-14V35l-14-14Z" fill-rule="evenodd"/>
+        <path d="M381 0h77v21h-55v20h45v21h-45v21h55v21h-77Z"/>
+        <path d="M475 0h24l28 75 28-75h24l-41 104h-23Z"/>
+        <path class="domain-dot" d="M584 82h22v22h-22Z"/>
+        <path d="M630 0h77v21h-55v20h45v21h-45v21h55v21h-77Z"/>
+        <path d="M730 0h22v76l7 7h30l7-7V0h22v84l-20 20h-48l-20-20Z"/>
+      </svg>
+    </h1>
+  </main>
+  <footer>© P.Schmidt</footer>
+  <p class="map-note">Illustration · fiktive Topologie, Mock-Daten · kein Live-System</p>
+  <div class="zoom-controls" hidden>
+    <button class="zoom-out" type="button" title="Verkleinern" aria-label="Karte verkleinern"><span aria-hidden="true"></span></button>
+    <button class="zoom-in" type="button" title="Vergrößern" aria-label="Karte vergrößern"><span aria-hidden="true"></span></button>
+  </div>
+  <button class="motion-toggle" type="button" title="Animation pausieren" aria-label="Animation pausieren" aria-pressed="false" hidden><span aria-hidden="true"></span></button>
+  <div class="edge edge-bottom" aria-hidden="true"><i></i><i></i></div>
+</body>
+</html>
