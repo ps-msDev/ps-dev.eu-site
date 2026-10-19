@@ -5,7 +5,7 @@
   const ctx = canvas.getContext("2d");
   const toggle = document.querySelector(".motion-toggle");
   const legend = document.querySelector(".legend");
-  const note = document.querySelector(".map-note");
+  const keepClear = [...document.querySelectorAll(".map-note, .version-switch")];
   const zoomControls = document.querySelector(".zoom-controls");
   const zoomIn = document.querySelector(".zoom-in"), zoomOut = document.querySelector(".zoom-out");
   if (!ctx) return;
@@ -339,8 +339,10 @@
     canvas.height = Math.round(h * dpr);
     ground.width = Math.ceil((w + margin * 2) * dpr);
     ground.height = Math.ceil((h + margin * 2) * dpr);
-    const r = note && note.getBoundingClientRect();
-    reserved = r ? [{ x0: r.left - 8, x1: r.right + 8, y0: r.top - 8, y1: r.bottom + 8 }] : [];
+    reserved = keepClear.map(el => {
+      const r = el.getBoundingClientRect();
+      return { x0: r.left - 8, x1: r.right + 8, y0: r.top - 8, y1: r.bottom + 8 };
+    });
     scale();
   }
 
