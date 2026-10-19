@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="systemkarte.css">
   <script src="systemkarte.js" defer></script>
+  <script src="switch.js" defer></script>
 </head>
 <body>
   <div class="atmosphere" aria-hidden="true"></div>
@@ -21,10 +22,11 @@
   <div class="brand-symbol" aria-hidden="true">
     <svg viewBox="0 0 40 40"><path d="M0 0h28l12 12v11H13v17H0Zm13 10v4h14v-4Z" fill="currentColor"/><path d="m22 27 18 13H22Z" fill="#ff532a"/></svg>
   </div>
-  <nav class="version-switch" aria-label="Version der Seite">
-    <a href="v1.html" title="Version 1: Datenfäden">V1</a>
-    <a href="./" aria-current="page" title="Version 2: Systemkarte">V2</a>
-  </nav>
+  <a class="version-switch" href="v1.html" data-version="2" data-current="2" aria-label="Zu Version 1 wechseln (Datenfäden)" title="Zu V1 wechseln">
+    <span class="vs-label" aria-hidden="true">V1</span>
+    <span class="vs-track" aria-hidden="true"><span class="vs-knob"></span></span>
+    <span class="vs-label" aria-hidden="true">V2</span>
+  </a>
   <ul class="legend" aria-label="Linien der Systemkarte hervorheben" hidden></ul>
   <main>
     <div class="registration" aria-hidden="true"><span></span><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
